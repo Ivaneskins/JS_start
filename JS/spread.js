@@ -40,13 +40,46 @@
 // поверхностные копии, которые создают ссылку на объкт внутри. Работает только
 // на переменных 1ого уровня
 
-const add = {
-    d: 17,
-    e: 20
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// const clone = (Object.assign({}, add));
+// clone.d = 20;
+
+// console.log(add);
+// console.log(clone);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[1] = 'aefwef';
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wordpress', 'livejornal', 'blogger'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+log(...num);
+
+const array = ['a', 'b'];
+
+const newAarray = [...array];
+
+const q = {
+    one: 1,
+    two: 2
 };
 
-const clone = (Object.assign({}, add));
-clone.d = 20;
-
-console.log(add);
-console.log(clone);
+const newObj = {...q};
